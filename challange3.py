@@ -19,6 +19,7 @@ def zlam_hash(pojed_haslo):
 db = sqlite3.connect("users-challange.db")
 c = db.cursor()
 users = c.execute("SELECT * FROM users")
+users.fetchall()
 c.close()
 print(users)
 for u in users:
@@ -32,3 +33,5 @@ for u in users:
     print(f"zakod haslo:{u(3)}")
     odkod_haslo = zlam_hash(user[3])
     print(f"odkod haslo:{odkod_haslo}")
+
+db.close
