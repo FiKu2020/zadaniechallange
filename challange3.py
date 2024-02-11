@@ -16,18 +16,19 @@ def zlam_hash(pojed_haslo):
                     return f"Nie znalez hasla"
 
 
-db = sqlite3.connect("users-challange.db").fetchall()
+db = sqlite3.connect("users-challange.db")
 c = db.cursor()
-users = c.execute("Select * from users")
+users = c.execute("SELECT * FROM users")
 c.close()
 print(users)
 for u in users:
     #id
-    print(u[1])
-
+    print(f"Id uzytk:{u[0]}")
     #imie
-    print(u[1])
+    print(f"Imie i Nazwisko:{u[1]}")
     #email
-    print(u[2])
+    print(f"Email:{u[2]}")
     #hash
-    print(u(3))
+    print(f"zakod haslo:{u(3)}")
+    odkod_haslo = zlam_hash(user[3])
+    print(f"odkod haslo:{odkod_haslo}")
