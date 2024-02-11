@@ -31,7 +31,7 @@ for u in users:
     print(f"Email:{u[2]}")
     #hash
     print(f"zakod haslo:{u(3)}")
-    odkod_haslo = zlam_hash(user[3])
+    odkod_haslo = zlam_hash(u[3])
     print(f"odkod haslo:{odkod_haslo}")
 
 db.close
