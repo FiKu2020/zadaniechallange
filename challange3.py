@@ -35,3 +35,8 @@ for u in users:
     print(f"odkod haslo:{odkod_haslo}")
 
 db.close
+
+
+
+
+
